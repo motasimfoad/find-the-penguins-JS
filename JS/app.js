@@ -1,6 +1,8 @@
 $(document).ready(function(){
+    var year = new Date().getFullYear();
+    $("#year").html(year)
 
-    $("p").hover(function(){
+    $("h1").hover(function(){
         $(this).css("color", "red")
     },
     function(){
