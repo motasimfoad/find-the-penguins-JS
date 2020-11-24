@@ -4,6 +4,7 @@ $(document).ready(function(){
     var score = 0;
     var tickAudio = new Audio('./Assets/audio/tick.mp3');
     var bombAudio = new Audio('./Assets/audio/bomb.mp3');
+    bombAudio.volume = 0.3;
     var tadaAudio = new Audio('./Assets/audio/tada.mp3');
     
     $("#year").html(year);
