@@ -15,8 +15,7 @@ $(document).ready(function(){
         }
         console.log(score);
       });
-      $("#close").click(function() {
-          console.log("lala");
+      $("#restart").click(function() {
         location.reload(); 
       });
   }); 
