@@ -16,5 +16,6 @@ A JS/jQuery Find the penguin javascript game/webgame having
 - Hover effects.  
 - jQuery popup screen for showing result.
 - Game restart button.
+- Session based current score and HIGH score.
 - Not fully responsive though :p 
 
