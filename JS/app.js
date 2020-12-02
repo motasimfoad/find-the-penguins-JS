@@ -8,9 +8,6 @@ var tadaAudio = new Audio('./Assets/audio/tada.mp3');
 var imgArr;
 bombAudio.volume = 0.3;
 
-console.log(yetiIndex);
-
-
 var resetGame = function() {
     for (let i = 0; i < imgArr.length; i++) {
         i = parseInt(i+1);
@@ -18,25 +15,18 @@ var resetGame = function() {
         $(this).attr("value", (i));
             
         });
-        //attr("value", (i));
-        // element = imgArr[i];
-        console.log(i);
     }
     score = 0;
     yetiIndex = Math.floor((Math.random() * 9) + 1);
-    var element;
     $(".popup-overlay, .popup-content").removeClass("active");
     $("img").attr("src", "./Assets/images/door.png");
     $("#score").text(score);
-    console.log(score + " "+highScore+ " "+yetiIndex + " "+typeof(yetiIndex)+ " "+typeof($("img").attr("value"))+ " "+imgArr.length);
 }
 
 $(document).ready(function(){
    $("#year").html(year);
     imgArr = $("img");
-    console.log(imgArr.length);
     $("img").click(function() {
-        console.log(($(this).attr("value")));
         if (score == (imgArr.length-2)) {
             tadaAudio.play();
             $(".popup-image").attr("src", "./Assets/images/penguin.png");
@@ -71,7 +61,6 @@ $(document).ready(function(){
       });
 
       $("#restart").click(function() {
-        // location.reload(); 
         resetGame();
       });
   }); 
