@@ -48,8 +48,11 @@ $(document).ready(function(){
             if (yetiIndex == $(this).attr("value")) {
                 bombAudio.play();
                 $(this).attr("src", "./Assets/images/yeti.png");
+                $(".popup-image").attr("src", "./Assets/images/yeti.png");
+                $("#winLoss").text("Yati killed you!!");
+                $("#winLoss").css( "color", "red" );
                 $(".popup-overlay, .popup-content").addClass("active");
-            } else {
+        } else {
                 $(this).attr("src", "./Assets/images/penguin.png");
                 tickAudio.play();
                 if ($(this).attr("value") == "clicked") {
@@ -63,8 +66,6 @@ $(document).ready(function(){
         }
         if (score > highScore) {
             highScore = score;
-            sessionStorage.setItem('hS', highScore);
-            var aValue = sessionStorage.getItem('hS');
             $("#high-score").text(highScore);
         }
       });
